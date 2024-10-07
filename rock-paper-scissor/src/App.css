@@ -1,0 +1,14 @@
+.box{
+    border:1px solid black;
+    width: 500px;
+    margin: 10px;
+}
+.item-img{
+    width: 500px;
+}
+
+.main{
+    display: flex; /* 세로 정렬이 가로 정렬이 된다!*/
+    justify-content: center; 
+
+}
