@@ -1,14 +1,136 @@
-.box{
-    border:1px solid black;
-    width: 500px;
+body {
+  background-color: #eddb75;
+}
+
+.container {
+  border: 2px solid #ccc; /* 큰 박스 테두리 */
+  padding: 20px; /* 안쪽 여백 */
+  border-radius: 40px; /* 둥근 모서리 */
+  margin: 20px auto;
+  width: 700px; /* 고정 너비 */
+  height: 900px; /* 고정 세로 길이 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+  background-color: white;
+}
+.score-main {
+  display: flex; /* Flexbox 활성화 */
+  justify-content: space-between; /* 왼쪽 끝과 오른쪽 끝에 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+.resetBtn {
+  background-color: transparent; /* 배경색 투명 */
+  border-radius: 20px; /* 둥근 모서리 값 설정 */
+  font-size: 15px; /* 글자 크기 증가 */
+  font-weight: bold;
+  border: 2px solid #ccc;
+  width: 70px; /* 버튼 너비 설정 */
+  cursor: pointer; /* 커서 모양 설정 */
+  transition: background-color 0.3s ease; /* 호버 시 부드러운 배경색 전환 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+
+.resetBtn:hover {
+  background-color: lightgray; /* 호버 시 배경색 변경 */
+}
+
+.main-middle {
+  display: flex; /* 세로 정렬이 가로 정렬이 된다! */
+  justify-content: center; /* 박스를 중앙으로 정렬 */
+  height: 700px;
+}
+
+.main-bottom {
+  display: flex; /* 세로 정렬이 가로 정렬이 된다! */
+  justify-content: center; /* 박스를 중앙으로 정렬 */
+}
+
+.box {
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  width: 300px; /* 박스의 고정 너비 */
+  margin: 10px; /* 박스 간의 간격 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  height: 650px;
+
+  /* Flexbox 설정 추가 */
+  display: flex; /* Flexbox 활성화 */
+  flex-direction: column; /* 세로 방향으로 배치 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+}
+
+.item-img {
+  width: 300px; /* 이미지 너비 */
+}
+
+.win {
+  color: green; /* 승리 시 초록색 */
+  border: 5px solid rgb(101, 255, 101);
+  
+}
+
+.lose {
+  color: red; /* 패배 시 빨강색 */
+  border: 5px solid rgb(255, 114, 93);
+}
+
+.tie {
+  color: black; /* 비길 시 검정색 */
+  border: 5px solid rgb(64, 39, 39);
+}
+.button {
+  display: inline-block; /* 인라인 블록 요소로 설정하여 다른 요소와의 배치 조절 */
+  width: 80px; /* 버튼 너비 조절 */
+  height: 80px; /* 버튼 높이 조절 */
+  padding: 0; /* 내부 여백 제거 */
+  border: black; /* 테두리 제거 */
+  border-radius: 25%; /* 완전한 원형으로 만들기 */
+  background-color: #ffffff; /* 배경색 설정 */
+  border: 2px solid #ccc;
+  margin-right: 10px;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button img {
+  width: 100%; /* 이미지가 버튼을 가득 채우도록 */
+  height: 100%;
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* 화면 너비가 768px 이하일 때 */
+  .container {
+    width: 90%; /* 화면 너비의 90%로 설정 */
+    height: 100vh; /* 화면 높이의 90%로 설정하여 크기 유지 */
+    padding: 10px; /* 여백 조정 */
+  }
+
+  .main-middle {
+    height: 70vh;
+  }
+
+  .main-bottom {
+    height: 10vh;
+    padding: 10px; /* 여백 조정 */
     margin: 10px;
-}
-.item-img{
-    width: 500px;
-}
+  }
 
-.main{
-    display: flex; /* 세로 정렬이 가로 정렬이 된다!*/
-    justify-content: center; 
+  .box {
+    width: 90%; /* 박스가 전체 너비의 90%를 차지하도록 설정 */
+    height: 70vh; /* 고정된 비율을 유지하여 부모 컨테이너의 85%로 설정 */
+  }
 
+  .item-img {
+    width: 100%; /* 이미지 너비를 전체로 설정 */
+    height: auto; /* 비율에 맞게 높이를 자동 설정 */
+  }
+
+  .button {
+    width: 60%; /* 버튼의 너비를 60%로 설정하여 작게 조정 */
+    padding: 5px; /* 버튼 내부 여백을 줄여서 작게 설정 */
+  }
 }
