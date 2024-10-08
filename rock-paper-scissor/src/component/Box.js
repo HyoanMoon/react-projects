@@ -32,14 +32,18 @@ const Box = (props) => {
   return (
     <div>
       <div className={` box ${resultClass}`}>
-        <h1>{props.title}</h1>
-        <img
-          className="item-img"
-          src={props.item && props.item.img}
-          alt={result}
-        />
+        <h3>{props.title}</h3>
+        {props.item ? (
+        <img className="item-img" src={props.item && props.item.img} alt={result} /> 
+        ) : (
+          <img src="https://cdn.pixabay.com/photo/2017/02/13/01/26/the-question-mark-2061539_1280.png" alt= "?"></img> // 기본 안내 메시지
+        )}
+
+
+
         {/* userSelect의 초기값은 null로 설정되어 있으므로, Box 컴포넌트가 처음 렌더링될 때 item prop은 null입니다. Box 컴포넌트가 처음 렌더링되면 item의 값이 null인 상태로 전달됩니다.
             그래서 -> 조건부 렌더링을 써야하는데: props.item 이 false (null) 이면 props.item.img 여기도 실행이 안됨. -> props.item이 있으면 true면 props.item.img 이것도 true */}
+
         <h2>{result}</h2>
       </div>
     </div>
