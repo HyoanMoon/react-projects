@@ -1,5 +1,6 @@
 # Play Rock-Paper-Scissor Game!
-![rock-paper-scissor_demo2](https://github.com/user-attachments/assets/d861652a-f796-443e-ab1d-ab5bfdd7fa37)
+
+![rock-paper-scissor_demo](https://github.com/user-attachments/assets/aec343df-c794-4a8c-9a1c-aac2a819ab36)
 
 
 
